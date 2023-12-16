@@ -54,6 +54,7 @@ body {
     box-shadow: 5px 5px 5px 2px grey;
 }
 
+
 #full_screen {
     position: fixed;
     z-index: 1000;
@@ -69,10 +70,8 @@ body {
 
 #full_screen img{
     width: 500px;
-    z-index: 2000;
-
-   
 }
+
 
 #footer{
     padding: 50px;

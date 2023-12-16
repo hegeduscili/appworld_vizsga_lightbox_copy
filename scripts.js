@@ -12,18 +12,25 @@ for (const img of images) {
 
     fullScreenContainer.style.display = 'flex';
 
+
     fullScreenImage.src = img.src;
     fullScreenImage.alt = img.alt;
+    fullScreenImage.id = 'fs_image';
 
     fullScreenContainer.innerHTML = '';
     fullScreenContainer.appendChild(fullScreenImage);
 
-    fullScreenImage.style.pointerEvents = 'none';
+    
 });
 }
 
 fullScreenContainer.addEventListener('click',function(){
-    fullScreenContainer.style.display = 'none';
+    if (event.target.id === 'fs_image') {
+        fullScreenContainer.style.display = 'fixed';
+    }else{
+        fullScreenContainer.style.display = 'none';
+        console.log('szurke')
+    }
 })
 
 
