@@ -20,9 +20,14 @@ for (const img of images) {
     fullScreenContainer.innerHTML = '';
     fullScreenContainer.appendChild(fullScreenImage);
 
-    
-});
+    fullScreenImage.animate({
+        'opacity': 1,
+        'transform': 'scale(1)'
+    }, 1000); 
 }
+    )};
+
+    
 
 fullScreenContainer.addEventListener('click',function(){
     if (event.target.id === 'fs_image') {
