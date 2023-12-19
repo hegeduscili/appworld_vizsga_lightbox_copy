@@ -18,6 +18,7 @@ function showImage(index, gallery) {
   } else if (gallery === 'cats') {
     currentGallery = cats_pics;
   }
+  
 
   const fullScreenImage = document.getElementById('fs_image');
   fullScreenImage.src = currentGallery[index].src;
@@ -66,15 +67,12 @@ for (const img of images) {
     fullScreenContainer.appendChild(rightIcon);
 
     if (img.classList.contains('hounds_pic')) {
+      currentIndexHounds = Array.from(hounds_pics).indexOf(img);
       showImage(currentIndexHounds, 'hounds');
     } else if (img.classList.contains('cats_pic')) {
+      currentIndexCats = Array.from(cats_pics).indexOf(img);
       showImage(currentIndexCats, 'cats');
     }
-
-    fullScreenImage.animate({
-      'opacity': 1,
-      'transform': 'scale(1)'
-    }, 1000);
   });
 }
 
