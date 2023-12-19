@@ -23,6 +23,9 @@ function showImage(index, gallery) {
   const fullScreenImage = document.getElementById('fs_image');
   fullScreenImage.src = currentGallery[index].src;
   fullScreenImage.alt = currentGallery[index].alt;
+
+  $(fullScreenImage).hide().fadeIn(500);
+
 }
 
 for (const img of images) {

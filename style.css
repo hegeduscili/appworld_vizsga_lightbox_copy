@@ -72,6 +72,8 @@ body {
 
 #full_screen img {
   width: 500px;
+  border: 10px solid white;
+  border-radius: 10px;
 }
 
 #full_screen i {
